@@ -49,7 +49,7 @@ public class PecaController {
 			
 			LOGGER.info("Fim do método @Get cadastrarPeca");
 			
-			return "cadastrarpeca";
+			return "";
 	}
 	
 	
@@ -81,7 +81,7 @@ public class PecaController {
 		pecaService.listaDefeitos(listDefeitos, idPeca);
 		
 
-		return "cadastroconcluido"; 
+		return ""; 
 	}
 	
 
