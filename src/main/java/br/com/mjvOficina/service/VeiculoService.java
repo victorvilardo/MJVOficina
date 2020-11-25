@@ -13,9 +13,9 @@ public interface VeiculoService {
 	Integer cadastrarVeiculo(Veiculo veiculo);
 	
 
-	Veiculo getVeiculoFirstResultByName(String name);
+	Veiculo buscaVeiculo(String name);
 	
 
-	void linkarPecas(List<Peca> list, Integer idVeiculo);
+	void listarPecas(List<Peca> list, Integer idVeiculo);
 	}
 

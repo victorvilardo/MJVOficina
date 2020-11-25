@@ -28,6 +28,7 @@ public class DefeitoDaoImpl implements DefeitoDao {
 
 	@Override
 	public List<Defeito> listaDefeito() {
+		
 		String sql = "SELECT * FROM TB_DEFEITO";
 		List<Defeito> lista = new ArrayList<>();
 		try {
@@ -76,17 +77,19 @@ public class DefeitoDaoImpl implements DefeitoDao {
 	
 	@Override
 	public Defeito buscaId(Integer id) {
+		
 		String sql = "SELECT * FROM TB_DEFEITO WHERE idDefeito = :idDefeito";
 		try {
+			
 			LOGGER.info("Inicio do método buscaId");
 			MapSqlParameterSource param = new MapSqlParameterSource().addValue("idDefeito", id);
 			Defeito defeito = template.queryForObject(sql, param, new DefeitoRowMapper());
 			LOGGER.info("Fim do método buscaId");
 			return defeito;
+			
 		}catch(EmptyResultDataAccessException e) {
 			LOGGER.error("Erro emptyResult no método buscaId: " + e.getMessage());
 			return null;
 		}
 	}
 }
-	

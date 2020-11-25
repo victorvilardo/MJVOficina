@@ -28,12 +28,12 @@ public class VeiculoServiceImpl implements VeiculoService {
 		}
 
 		@Override
-		public Veiculo getVeiculoFirstResultByName(String name) {
+		public Veiculo buscaVeiculo(String name) {
 			return veiculoDao.buscaVeiculo(name);
 		}
 
 		@Override
-		public void linkarPecas(List<Peca> list, Integer idVeiculo) {
+		public void listarPecas(List<Peca> list, Integer idVeiculo) {
 			veiculoDao.linkarPecas(list, idVeiculo);
 		}
 }
